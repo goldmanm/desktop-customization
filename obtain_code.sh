@@ -7,7 +7,7 @@ git clone git@github.com:ReactionMechanismGenerator/RMG-database.git
 #git clone git@github.com:ReactionMechanismGenerator/RMG-website.git
 #git clone git@github.com:Cantera/cantera.git
 git clone git@github.com:goldmanm/website.git
-
+git clone git@github.com:goldmanm/tools.git
 
 
 ##############for personal website
