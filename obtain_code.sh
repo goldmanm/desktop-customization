@@ -15,6 +15,7 @@ sudo apt-get install -y ruby ruby-dev nodejs
 sudo gem install jekyll
 sudo gem install bundler
 cd $HOME/workspace/website
+## maybe the statement below isn't ideal. seemed to modify the structure of the program.
 jekyll new . --force
 
 ###########add my personal remote for RMG
