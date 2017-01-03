@@ -1,5 +1,14 @@
 
-# for i3 desktop (from https://github.com/erikdubois/i3-on-Ubuntu-16.10)
+# for i3 desktop 
+
+# import ubuntu repositories, since even xenial is out of date (http://i3wm.org/docs/repositories.html)
+echo "deb http://debian.sur5r.net/i3/ $(lsb_release -c -s) universe" | sudo tee -a /etc/apt/sources.list
+sudo apt-get update
+sudo apt-get --allow-unauthenticated install sur5r-keyring
+sudo apt-get install i3
+
+# installation information and guide came from (from https://github.com/erikdubois/i3-on-Ubuntu-16.10)
+
 # step 1
 sudo apt-get install -y i3 i3lock i3status i3-wm 
 sudo apt-get install -y dmenu
