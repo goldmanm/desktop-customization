@@ -247,8 +247,10 @@ bindsym $mod+shift+d exec j4-dmenu-desktop --dmenu="dmenu -fn 'DroidSansMono:bol
 # xrandr --output DVI-I-2 --right-of DVI-I-1 --auto
 
 # my current setup
-set $firstMonitor DVI-I-1
-set $secondMonitor DVI-I-2
+set $firstMonitor VGA1
+set $secondMonitor HDMI1
+
+exec xrandr --output HDMI1 --right-of VGA1 --auto
 
 #set $firstMonitor HDMI1
 
@@ -350,8 +352,6 @@ exec redshift-gtk -l 41:-72
 
 # USER APPLICATIONS
 
-exec firefox
-exec thunderbird
 exec gedit ~/research/notes/timeline.md ~/research/notes/todo.md ~/research/notes/journal.md
 for_window [class="Gedit"] focus
 exec ~/.config/i3/start-conkys.sh
