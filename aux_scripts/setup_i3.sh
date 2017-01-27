@@ -25,8 +25,7 @@ sudo apt-get install -y conky
 sudo apt-get install -y variety
 
 
-# other things to do
-mkdir ~/.config/i3
+# copy and move configuration files
 cp ~/scripts/aux_scripts/i3/* ~/.config/i3
 cp ~/scripts/aux_scripts/i3/.* ~/.config/i3
 cd ~/.config/i3
