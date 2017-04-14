@@ -7,7 +7,8 @@ sudo apt-get upgrade
 
 #general
 sudo apt-get install -y texlive-full pandoc texstudio okular
-sudo apt-get install -y thunderbird gedit firefox redshift-gtk 
+sudo apt-get install -y thunderbird gedit firefox redshift-gtk
+sudo apt-get install -y stopwatch 
 sudo apt-get install -y gtk-recordmydesktop shutter
 sudo apt-get install -y nautilus-dropbox gparted
 sudo apt-get install -y sed gedit

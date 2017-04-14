@@ -315,6 +315,8 @@ bindsym $mod+Shift+equal move container to workspace 12
 # bindsym button9 move left
 # bindsym button8 move right
 
+# do not change window focus with mouse
+focus_follows_mouse no
 
 ################### ASSIGN ######################
 
@@ -352,7 +354,7 @@ exec redshift-gtk -l 41:-72
 
 # USER APPLICATIONS
 
-exec gedit ~/research/notes/timeline.md ~/research/notes/todo.md ~/research/notes/journal.md
+exec gedit ~/research/notes/timeline.md ~/research/notes/todo.md ~/research/notes/journal.md ~/research/isotopes/notebook.md ~/research/isotopes/overview.md
 for_window [class="Gedit"] focus
 exec ~/.config/i3/start-conkys.sh
 
@@ -362,7 +364,7 @@ exec ~/.config/i3/start-conkys.sh
 #mod1 = ALT
 
 bindsym $mod+F1 exec firefox;workspace 1web;focus
-bindsym $mod+F2 exec thunderbird;workspace 2mail;focus
+bindsym $mod+F2 workspace 2mail;exec thunderbird; exec stopwatch
 bindsym $mod+F3 exec spyder;workspace 3dev;focus
 bindsym $mod+F4 exec chromium-browser;workspace 4ana;focus
 bindsym $mod+F5 exec texstudio;workspace 5write;focus
