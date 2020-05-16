@@ -354,8 +354,8 @@ exec redshift-gtk -l 41:-72
 
 # USER APPLICATIONS
 
-exec gedit ~/research/notes/timeline.md ~/research/notes/todo.md ~/research/notes/journal.md ~/research/isotopes/notebook.md ~/research/isotopes/overview.md
-for_window [class="Gedit"] focus
+#exec gedit ~/research/notes/timeline.md ~/research/notes/todo.md ~/research/notes/journal.md ~/research/isotopes/notebook.md ~/research/isotopes/overview.md
+#for_window [class="Gedit"] focus
 exec ~/.config/i3/start-conkys.sh
 
 
