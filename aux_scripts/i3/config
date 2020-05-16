@@ -523,6 +523,10 @@ bindsym $mod+u border none
 # exec setxkbmap be
 
 
+###################       Mouse          ##############################
+
+exec xinput --set-prop "SN TECH      Rii M01 " "libinput Accel Speed" -0.6
+
 ###################       UNCLUTTER      ##############################
 
 
