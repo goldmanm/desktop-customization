@@ -346,6 +346,7 @@ exec_always --no-startup-id numlockx on
 exec --no-startup-id nm-applet
 exec dropbox start
 exec variety
+exec blueman-tray
 #exec mintupdate-launcher
 exec volti
 exec pasystray
