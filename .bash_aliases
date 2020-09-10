@@ -39,7 +39,7 @@ alias encrypt='fusermount -u /home/mark/Documents/finances'
 #alias ermg='source activate rmg_env; source /usr/local/bin/setup_cantera'
 alias ermg='source activate rmg_env'
 alias ermg3='source activate rmg_env3'
-alias ep3='source activate p36'
+alias ep3='source activate p3'
 #alias openju='jupyter notebook --browser=chromium-browser --NotebookApp.iopub_data_rate_limit=10000000'
 alias openju='jupyter lab --browser=chromium-browser'
 export RMG=/home/mark/workspace/RMG-Py
