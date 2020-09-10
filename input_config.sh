@@ -2,7 +2,11 @@
 ## add symbolic links into files
 #ln -s "~/Dropbox (MIT)/Research" ~/
 #mv ~/Research ~/research
-ln -is .bash_aliases ~/
+current_wd=$(pwd)
+cd ~
+home_wd=$(pwd)
+cd $current_wd
+ln -is $current_wd/.bash_aliases $home_wd/
 
 ##startup scripts
 
