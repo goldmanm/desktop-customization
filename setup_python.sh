@@ -10,7 +10,7 @@ bash ~/Downloads/anaconda.sh
 conda create -n p3 python=3.7
 source activate p3
 conda install -y jupyter scipy pandas seaborn scikit-learn
-conda install jupyterlab
+conda install -y jupyterlab jupyter_core
 conda install -y -c conda-forge jupyter_contrib_nbextensions
 jupyter contrib nbextension install --user
 jupyter nbextension enable spellchecker/main
