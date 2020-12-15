@@ -16,7 +16,9 @@ sudo apt-get install -y gtk-recordmydesktop shutter
 sudo apt-get install -y nautilus-dropbox gparted
 sudo apt-get install -y sed
 sudo apt-get install -y pinta inkscape
-sudo apt-get install -y calibre audacity
+sudo apt-get install -y calibre audacity ffmpeg vlc
+sudo apt-get install -y xbacklight
+
 # disk file space viewer
 sudo apt-get install -y baobab
 # use locate method
