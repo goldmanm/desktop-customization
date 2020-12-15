@@ -11,3 +11,6 @@ ln -is $current_wd/.bash_aliases $HOME/
 sudo echo "[user]
 	email = goldmanm@mit.edu
 	name = Mark Goldman" > $HOME/.gitconfig
+
+# limit cacheing of directory by gnome tracker (not sure how it is better/worse than mlocate)
+gsettings set org.freedesktop.Tracker.Miner.Files low-disk-space-limit 1
