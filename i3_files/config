@@ -247,10 +247,8 @@ bindsym $mod+shift+d exec j4-dmenu-desktop --dmenu="dmenu -fn 'DroidSansMono:bol
 # xrandr --output DVI-I-2 --right-of DVI-I-1 --auto
 
 # my current setup
-set $firstMonitor VGA1
-set $secondMonitor HDMI1
-
-exec xrandr --output HDMI1 --right-of VGA1 --auto
+set $firstMonitor DVI-I-1
+set $secondMonitor DVI-I-2
 
 #set $firstMonitor HDMI1
 
@@ -315,8 +313,6 @@ bindsym $mod+Shift+equal move container to workspace 12
 # bindsym button9 move left
 # bindsym button8 move right
 
-# do not change window focus with mouse
-focus_follows_mouse no
 
 ################### ASSIGN ######################
 
@@ -346,20 +342,20 @@ exec_always --no-startup-id numlockx on
 exec --no-startup-id nm-applet
 exec dropbox start
 exec variety
-exec blueman-tray
 #exec mintupdate-launcher
 exec volti
 exec pasystray
 exec blueberry-tray
-exec redshift-gtk -l 41:-72
+exec redshift-gtk -l 41:-7
 
 # USER APPLICATIONS
 
-#exec gedit ~/research/notes/timeline.md ~/research/notes/todo.md ~/research/notes/journal.md ~/research/isotopes/notebook.md ~/research/isotopes/overview.md
+#exec gedit ~/research/notes/reading.md ~/research/notes/timeline.md ~/research/notes/todo.md ~/research/branching/overview.md ~/research/isotopes/overview.md ~/research/isotopes/notebook.md ~/research/rmg/overview.md 
 #for_window [class="Gedit"] focus
 exec ~/.config/i3/start-conkys.sh
 
-
+# shared storage on media server
+#exec mount -t cifs //192.168.1.1/drive/ /media/shared -o user=mark,vers=1.0,password=Showmemydataplease
 
 ################### SHORTCUTS APPLICATIONS ######################
 #mod1 = ALT
@@ -369,7 +365,7 @@ bindsym $mod+F2 exec thunderbird;workspace 2mail;focus
 bindsym $mod+F3 exec spyder;workspace 3dev;focus
 bindsym $mod+F4 exec chromium-browser;workspace 4ana;focus
 bindsym $mod+F5 exec texstudio;workspace 5write;focus
-bindsym $mod+F6 exec zotero;workspace 6read;focus
+bindsym $mod+F6 exec ~/.zotero/Zotero_linux-x86_64/zotero;workspace 6read;focus
 bindsym $mod+F7 exec gedit;workspace 7note;focus
 #bindsym control+mod1+t exec terminator; focus
 
@@ -479,6 +475,17 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
+################### Laptop specific alterations #################
+
+# you will need to install xbacklight for this to function properly
+# if not working, try instructions here: https://unix.stackexchange.com/questions/301724/xbacklight-not-working#340926
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 1
+
+# for touchpad enabling/disabling, not sure if works
+# I think this disables the keypad (which cannot be undone) instead of the just touchpad
+# bindsym $mod+mod1+F5 exec xinput disable 13
+# bindsym $mod+mod1+F6 exec xinput enable 13
 
 ################### AUDIO ######################
 
@@ -524,10 +531,6 @@ bindsym $mod+u border none
 # exec setxkbmap be
 
 
-###################       Mouse          ##############################
-
-exec xinput --set-prop "SN TECH      Rii M01 " "libinput Accel Speed" -0.9
-
 ###################       UNCLUTTER      ##############################
 
 
@@ -566,14 +569,14 @@ bar {
     workspace_buttons yes
     
     colors {
-            background #2F2F2F
-            statusline #eeeeee
+            background #000000
+            statusline #dddddd
             separator #666666
             #                     border  backgr. text
-            focused_workspace     #a9a9a9 #222222 #a9a9a9
-            active_workspace      #a9a9a9 #222222 #a9a9a9
-            inactive_workspace    #a9a9a9 #5f676a #a9a9a9
-            urgent_workspace      #4A4A4A #4A4A4A #a9a9a9
+            focused_workspace     #555555 #222222 #bbbbbb
+            active_workspace      #555555 #222222 #bbbbbb
+            inactive_workspace    #000000 #000000 #a9a9a9
+            urgent_workspace      #448844 #000000 #a9a9a9
             }
     }
 
@@ -583,9 +586,9 @@ bar {
 client.placeholder      #242424 #242424 #242424
 client.background       #242424 #242424 #242424
 client.focused          #4A4A4A #4A4A4A #e5e5e5 #4A4A4A
-client.unfocused        #222222 #222222 #aaaaaa #222222
+client.unfocused        #000000 #000000 #aaaaaa #222222
 client.focused_inactive #222222 #222222 #a9a9a9 #222222
-client.urgent           #4A4A4A #4A4A4A #f7f7f7 #4A4A4A
+client.urgent           #448844 #448844 #f7f7f7 #448844
 
 
 #################################################################

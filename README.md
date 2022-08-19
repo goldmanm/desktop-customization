@@ -14,3 +14,21 @@ The following scripts can be called with `./[script name]` from the terminal. He
 * `input_config.sh` - adds some additional settings (like bash aliases) and startup scripts
 
 **note: you may want to double check the scripts so you know what you are installing.  Remember, this repository comes with no warranty.**
+
+
+# other troubleshooting not in code
+
+## getting backlight adjustment to work
+
+There are multiple ways to adjust brightness. Here are some ways to adjust it. [source](https://www.pcsuggest.com/adjust-linux-screen-brightness/)
+
+1. `sudo gedit /etc/default/grub`
+2. on line starting with `GRUB_CMDLINE_LINUX_DEFAULT=`, add "` acpi_backlight=vendor`" within the quotes.
+3. restart the computer
+4. if running `xbacklight -set 20` doesn't work, then try variables `native` or `none`.
+
+If these don't work, then it might be possible to adjust the brightness with the files in `/etc/default/backlight`. Here's an example script:
+
+```
+
+```
